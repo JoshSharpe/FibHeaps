@@ -20,7 +20,16 @@ public class Main
 
         FibNode f = new FibNode(0);
         f.getCurrentLevel().printList();
-        f.setSibling(new FibNode(4));
-        f.getCurrentLevel().printList();
+
+        FibHeap h = new FibHeap();
+        h.insert(f);
+        h.getRootList().printList();
+        System.out.printf("Min so far: %d\n", h.getMin().getValue());
+        h.insert(new FibNode(10));
+        h.getRootList().printList();
+        System.out.printf("Min so far: %d\n", h.getMin().getValue());
+        h.insert(new FibNode(-1));
+        h.getRootList().printList();
+        System.out.printf("Min so far: %d\n", h.getMin().getValue());
     }
 }

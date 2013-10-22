@@ -8,14 +8,12 @@ CLASSES = \
         ListNode.java \
         FibNode.java \
         LinkedList.java \
+		FibHeap.java \
         Main.java 
 
 default: classes
 
 classes: $(CLASSES:.java=.class)
-
-largeRand:
-	java Number 10000 0 1 10000 data.txt
 
 clean:
 	$(RM) *.class
